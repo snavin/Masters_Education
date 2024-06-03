@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<movies>
+<movie>
+<movie_code>m101</movie_code>
+<title>DNS</title>
+<genre>XML</genre>
+<release_date>07-11-2022</release_date>
+<rating>7</rating>
+<language>DB</language>
+<director>
+<first_name>NAVIN</first_name>
+<last_name>KUMAR</last_name>
+</director>
+</movie>
+<movie>
+<movie_code>m102</movie_code>
+<genre>Advemture</genre>
+<genre>Fantasy</genre>
+<release_date>2021-01-03</release_date>
+<rating>4.5</rating>
+<language>English</language>
+<director>Paul Bryne</director>
+</movie>
+</movies>

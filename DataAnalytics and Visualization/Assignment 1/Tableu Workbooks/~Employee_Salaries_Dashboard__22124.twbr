@@ -1,0 +1,767 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20224.23.0209.1653                               -->
+<workbook original-version='18.1' source-build='2022.4.1 (20224.23.0209.1653)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='salaries' inline='true' name='federated.0qsb9av05j06vq1cr7ukd1cau31g' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='salaries' name='textscan.1n5nesl12hjzqo17q1s2q0anm1hc'>
+            <connection class='textscan' directory='D:/DBS/Semester 2 Classes/DataAnalytics and Visualization/Assignment 1/DataWarehouse Files/DBEmp/DBEmp' filename='salaries.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1n5nesl12hjzqo17q1s2q0anm1hc' name='salaries.csv' table='[salaries#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=';'>
+            <column datatype='integer' name='emp_no' ordinal='0' />
+            <column datatype='integer' name='salary' ordinal='1' />
+            <column datatype='date' name='from_date' ordinal='2' />
+            <column datatype='date' name='to_date' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.1n5nesl12hjzqo17q1s2q0anm1hc' name='salaries.csv' table='[salaries#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=';'>
+              <column datatype='integer' name='emp_no' ordinal='0' />
+              <column datatype='integer' name='salary' ordinal='1' />
+              <column datatype='date' name='from_date' ordinal='2' />
+              <column datatype='date' name='to_date' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1n5nesl12hjzqo17q1s2q0anm1hc' name='titles.csv' table='[titles#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=';'>
+              <column datatype='integer' name='emp_no' ordinal='0' />
+              <column datatype='string' name='title' ordinal='1' />
+              <column datatype='date' name='from_date' ordinal='2' />
+              <column datatype='date' name='to_date' ordinal='3' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[emp_no (titles.csv)]' value='[titles.csv].[emp_no]' />
+          <map key='[emp_no]' value='[salaries.csv].[emp_no]' />
+          <map key='[from_date (titles.csv)]' value='[titles.csv].[from_date]' />
+          <map key='[from_date]' value='[salaries.csv].[from_date]' />
+          <map key='[salary]' value='[salaries.csv].[salary]' />
+          <map key='[title]' value='[titles.csv].[title]' />
+          <map key='[to_date (titles.csv)]' value='[titles.csv].[to_date]' />
+          <map key='[to_date]' value='[salaries.csv].[to_date]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[salaries.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[titles.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>emp_no</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[emp_no]</local-name>
+            <parent-name>[salaries.csv]</parent-name>
+            <remote-alias>emp_no</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[salaries.csv_2B358F4264EA4FD39E0BC62FD945D829]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>salary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[salary]</local-name>
+            <parent-name>[salaries.csv]</parent-name>
+            <remote-alias>salary</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[salaries.csv_2B358F4264EA4FD39E0BC62FD945D829]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>from_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[from_date]</local-name>
+            <parent-name>[salaries.csv]</parent-name>
+            <remote-alias>from_date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[salaries.csv_2B358F4264EA4FD39E0BC62FD945D829]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>to_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[to_date]</local-name>
+            <parent-name>[salaries.csv]</parent-name>
+            <remote-alias>to_date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[salaries.csv_2B358F4264EA4FD39E0BC62FD945D829]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>emp_no</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[emp_no (titles.csv)]</local-name>
+            <parent-name>[titles.csv]</parent-name>
+            <remote-alias>emp_no</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titles.csv_D223733AC1214D8E9DE8389503CE1D1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[titles.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titles.csv_D223733AC1214D8E9DE8389503CE1D1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>from_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[from_date (titles.csv)]</local-name>
+            <parent-name>[titles.csv]</parent-name>
+            <remote-alias>from_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titles.csv_D223733AC1214D8E9DE8389503CE1D1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>to_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[to_date (titles.csv)]</local-name>
+            <parent-name>[titles.csv]</parent-name>
+            <remote-alias>to_date</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titles.csv_D223733AC1214D8E9DE8389503CE1D1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Title (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[title]' default='&quot;Other&quot;' new-bin='true'>
+          <bin default-name='true' value='&quot;Senior Engineer&quot;'>
+            <value>&quot;Senior Engineer&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='salaries.csv' datatype='table' name='[__tableau_internal_object_id__].[salaries.csv_2B358F4264EA4FD39E0BC62FD945D829]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='titles.csv' datatype='table' name='[__tableau_internal_object_id__].[titles.csv_D223733AC1214D8E9DE8389503CE1D1F]' role='measure' type='quantitative' />
+      <column caption='Emp No (Titles.Csv)' datatype='integer' name='[emp_no (titles.csv)]' role='measure' type='quantitative' />
+      <column caption='Emp No' datatype='integer' name='[emp_no]' role='measure' type='quantitative' />
+      <column caption='From Date (Titles.Csv)' datatype='date' name='[from_date (titles.csv)]' role='dimension' type='ordinal' />
+      <column caption='From Date' datatype='date' name='[from_date]' role='dimension' type='ordinal' />
+      <column caption='Salary' datatype='integer' name='[salary]' role='measure' type='quantitative' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='To Date (Titles.Csv)' datatype='date' name='[to_date (titles.csv)]' role='dimension' type='ordinal' />
+      <column caption='To Date' datatype='date' name='[to_date]' role='dimension' type='ordinal' />
+      <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:title:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Assistant Engineer&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Senior Staff&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Senior Engineer&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Technique Leader&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Manager&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Staff&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Engineer&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='salaries.csv' id='salaries.csv_2B358F4264EA4FD39E0BC62FD945D829'>
+            <properties context=''>
+              <relation connection='textscan.1n5nesl12hjzqo17q1s2q0anm1hc' name='salaries.csv' table='[salaries#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=';'>
+                  <column datatype='integer' name='emp_no' ordinal='0' />
+                  <column datatype='integer' name='salary' ordinal='1' />
+                  <column datatype='date' name='from_date' ordinal='2' />
+                  <column datatype='date' name='to_date' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='titles.csv' id='titles.csv_D223733AC1214D8E9DE8389503CE1D1F'>
+            <properties context=''>
+              <relation connection='textscan.1n5nesl12hjzqo17q1s2q0anm1hc' name='titles.csv' table='[titles#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=';'>
+                  <column datatype='integer' name='emp_no' ordinal='0' />
+                  <column datatype='string' name='title' ordinal='1' />
+                  <column datatype='date' name='from_date' ordinal='2' />
+                  <column datatype='date' name='to_date' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[emp_no]' />
+              <expression op='[emp_no (titles.csv)]' />
+            </expression>
+            <first-end-point object-id='salaries.csv_2B358F4264EA4FD39E0BC62FD945D829' />
+            <second-end-point object-id='titles.csv_D223733AC1214D8E9DE8389503CE1D1F' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Average Starting Salary from 1985 to 2002'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Calibri'>Average Starting Salary from 1985 to 2002</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salaries' name='federated.0qsb9av05j06vq1cr7ukd1cau31g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qsb9av05j06vq1cr7ukd1cau31g'>
+            <column-instance column='[salary]' derivation='Avg' name='[avg:salary:qk]' pivot='key' type='quantitative' />
+            <column caption='From Date' datatype='date' name='[from_date]' role='dimension' type='ordinal' />
+            <column caption='Salary' datatype='integer' name='[salary]' role='measure' type='quantitative' />
+            <column-instance column='[from_date]' derivation='Year-Trunc' name='[tyr:from_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0qsb9av05j06vq1cr7ukd1cau31g].[avg:salary:qk]</rows>
+        <cols>[federated.0qsb9av05j06vq1cr7ukd1cau31g].[tyr:from_date:ok]</cols>
+      </table>
+      <simple-id uuid='{2B086E19-B4E9-4521-B047-D5A800A4E67C}' />
+    </worksheet>
+    <worksheet name='Average salary as per Role.'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salaries' name='federated.0qsb9av05j06vq1cr7ukd1cau31g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qsb9av05j06vq1cr7ukd1cau31g'>
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Salary' datatype='integer' name='[salary]' role='measure' type='quantitative' />
+            <column-instance column='[salary]' derivation='Sum' name='[sum:salary:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[none:title:nk]' value='129' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[sum:salary:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+                <format attr='has-stroke' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0qsb9av05j06vq1cr7ukd1cau31g].[sum:salary:qk]</rows>
+        <cols>[federated.0qsb9av05j06vq1cr7ukd1cau31g].[none:title:nk]</cols>
+      </table>
+      <simple-id uuid='{90C4C941-FE45-4E4B-9061-82041B432D23}' />
+    </worksheet>
+    <worksheet name='Standard deviation of salary for each Title'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salaries' name='federated.0qsb9av05j06vq1cr7ukd1cau31g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qsb9av05j06vq1cr7ukd1cau31g'>
+            <column datatype='string' name='[Title (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[title]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;Senior Engineer&quot;'>
+                  <value>&quot;Senior Engineer&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Salary' datatype='integer' name='[salary]' role='measure' type='quantitative' />
+            <column-instance column='[salary]' derivation='Stdev' name='[std:salary:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[salary]' derivation='Sum' name='[sum:salary:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[none:title:nk]' value='0' />
+            <format attr='font-size' field='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[none:title:nk]' value='8' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[std:salary:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[std:salary:qk]' />
+              <color column='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[sum:salary:qk]' />
+              <text column='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[Title (group)]' />
+              <text column='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[none:title:nk]' />
+              <text column='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[sum:salary:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BCCF8C42-4FA5-4C60-B08E-FCCB8AD1EC45}' />
+    </worksheet>
+    <worksheet name='Total number of employees per job role'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total number of employees per job role</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run>Sum of Emp No  for each Title.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salaries' name='federated.0qsb9av05j06vq1cr7ukd1cau31g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qsb9av05j06vq1cr7ukd1cau31g'>
+            <column caption='Emp No (Titles.Csv)' datatype='integer' name='[emp_no (titles.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[emp_no (titles.csv)]' derivation='Sum' name='[sum:emp_no (titles.csv):qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[sum:emp_no (titles.csv):qk]' scope='cols' value='Total Employees' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[none:title:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0qsb9av05j06vq1cr7ukd1cau31g].[none:title:nk]</rows>
+        <cols>[federated.0qsb9av05j06vq1cr7ukd1cau31g].[sum:emp_no (titles.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{BA7DFB5F-2EA8-49B5-AD9C-5429869F37A7}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard'>
+      <style />
+      <size maxheight='800' maxwidth='1400' minheight='800' minwidth='1400' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97750' id='17' param='horz' type-v2='layout-flow' w='98716' x='642' y='1125'>
+            <zone h='97750' id='15' type-v2='layout-basic' w='87287' x='642' y='1125'>
+              <zone h='48875' id='5' name='Average salary as per Role.' w='43643' x='44286' y='1125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48875' id='11' name='Average Starting Salary from 1985 to 2002' w='43644' x='642' y='1125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48875' id='13' name='Total number of employees per job role' w='43643' x='44286' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48875' id='14' name='Standard deviation of salary for each Title' w='43644' x='642' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97750' id='16' is-fixed='true' param='vert' type-v2='layout-flow' w='11429' x='87929' y='1125'>
+              <zone h='9125' id='18' name='Standard deviation of salary for each Title' pane-specification-id='0' param='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[sum:salary:qk]' type-v2='color' w='11429' x='87929' y='1125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#f7f1f6' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout name='Desktop' />
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='26' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='25' param='vert' type-v2='layout-flow' w='98858' x='571' y='1000'>
+                <zone fixed-size='280' h='48875' id='11' is-fixed='true' name='Average Starting Salary from 1985 to 2002' w='43644' x='642' y='1125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48875' id='5' is-fixed='true' name='Average salary as per Role.' w='43643' x='44286' y='1125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48875' id='14' is-fixed='true' name='Standard deviation of salary for each Title' w='43644' x='642' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9125' id='18' name='Standard deviation of salary for each Title' pane-specification-id='0' param='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[sum:salary:qk]' type-v2='color' w='11429' x='87929' y='1125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48875' id='13' is-fixed='true' name='Total number of employees per job role' w='43643' x='44286' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='1' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#f7f1f6' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{08A04837-0AD2-4580-91E2-F9623101833E}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='Total number of employees per job role'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='92'>
+            <card type='caption' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[none:title:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1C694005-116C-4FD7-A7FF-A4A3273BB7BF}' />
+    </window>
+    <window class='worksheet' name='Average salary as per Role.'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='92'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F834D051-293A-441E-96A3-B4C3D177A1EE}' />
+    </window>
+    <window class='worksheet' name='Standard deviation of salary for each Title'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='92'>
+            <card type='caption' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0qsb9av05j06vq1cr7ukd1cau31g].[sum:salary:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{047AA2D6-2616-4B65-9442-2D619EDF3474}' />
+    </window>
+    <window class='worksheet' name='Average Starting Salary from 1985 to 2002'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='92'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B41668E9-141C-4CE0-9927-0DD104545796}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard'>
+      <viewpoints>
+        <viewpoint name='Average Starting Salary from 1985 to 2002'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Average salary as per Role.'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Standard deviation of salary for each Title'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total number of employees per job role' />
+      </viewpoints>
+      <active id='11' />
+      <device-preview visible='true'>
+        <device is-portrait='false' name='Generic Desktop Monitor' type='Desktop' />
+      </device-preview>
+      <simple-id uuid='{2D43A66B-2C72-460D-B554-5016754B0673}' />
+    </window>
+  </windows>
+</workbook>

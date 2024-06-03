@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="DataSource1">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=DESKTOP-2S7DU7A\MSSQLSERVER2019;Initial Catalog=Employee_DW</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>f208f1d8-b2a9-4d4e-875a-793aa965ff23</DataSourceID>
+</RptDataSource>

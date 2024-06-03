@@ -1,0 +1,6 @@
+Link for dataset : 
+https://www.kaggle.com/datasets/osmi/mental-health-in-tech-survey?select=survey.csv
+
+
+Link for colab :
+https://colab.research.google.com/drive/1Fb579KUbnQj8MQ8EBhcRZhReQEd_06_R?usp=sharing

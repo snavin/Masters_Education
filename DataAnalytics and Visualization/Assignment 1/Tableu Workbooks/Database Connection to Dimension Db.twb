@@ -1,0 +1,602 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20224.23.0209.1653                               -->
+<workbook original-version='18.1' source-build='2022.4.1 (20224.23.0209.1653)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Salary_Fact (Employee_DW)' inline='true' name='federated.0aueb2t0uh8zm91cre7sp1ya5dv4' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='DESKTOP-2S7DU7A\MSSQLSERVER2019' name='sqlserver.13m4pjd127zwdd1bgjecm1o5ec9f'>
+            <connection authentication='sspi' class='sqlserver' dbname='Employee_DW' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='DESKTOP-2S7DU7A\MSSQLSERVER2019' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.13m4pjd127zwdd1bgjecm1o5ec9f' name='Calendar_Dimension' table='[dbo].[Calendar_Dimension]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='sqlserver.13m4pjd127zwdd1bgjecm1o5ec9f' name='Salary_Fact' table='[dbo].[Salary_Fact]' type='table' />
+          <relation connection='sqlserver.13m4pjd127zwdd1bgjecm1o5ec9f' name='Calendar_Dimension' table='[dbo].[Calendar_Dimension]' type='table' />
+          <relation connection='sqlserver.13m4pjd127zwdd1bgjecm1o5ec9f' name='Department_Dimension' table='[dbo].[Department_Dimension]' type='table' />
+          <relation connection='sqlserver.13m4pjd127zwdd1bgjecm1o5ec9f' name='Employee_Dimension' table='[dbo].[Employee_Dimension]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[birthDate]' value='[Employee_Dimension].[birthDate]' />
+          <map key='[calenderKey (Calendar_Dimension)]' value='[Calendar_Dimension].[calenderKey]' />
+          <map key='[calenderKey]' value='[Salary_Fact].[calenderKey]' />
+          <map key='[deptName]' value='[Department_Dimension].[deptName]' />
+          <map key='[deptNo (Department_Dimension)]' value='[Department_Dimension].[deptNo]' />
+          <map key='[deptNo]' value='[Salary_Fact].[deptNo]' />
+          <map key='[empNo (Employee_Dimension)]' value='[Employee_Dimension].[empNo]' />
+          <map key='[empNo]' value='[Salary_Fact].[empNo]' />
+          <map key='[firstName]' value='[Employee_Dimension].[firstName]' />
+          <map key='[fullDate]' value='[Calendar_Dimension].[fullDate]' />
+          <map key='[gender]' value='[Employee_Dimension].[gender]' />
+          <map key='[hiredDate]' value='[Employee_Dimension].[hiredDate]' />
+          <map key='[lastName]' value='[Employee_Dimension].[lastName]' />
+          <map key='[monthOfDate]' value='[Calendar_Dimension].[monthOfDate]' />
+          <map key='[quarterOfDate]' value='[Calendar_Dimension].[quarterOfDate]' />
+          <map key='[salary]' value='[Salary_Fact].[salary]' />
+          <map key='[title]' value='[Employee_Dimension].[title]' />
+          <map key='[yearOfDate]' value='[Calendar_Dimension].[yearOfDate]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>empNo</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[empNo]</local-name>
+            <parent-name>[Salary_Fact]</parent-name>
+            <remote-alias>empNo</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Salary_Fact_0B933C0332554E6FA8BC626B9EC9392D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deptNo</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[deptNo]</local-name>
+            <parent-name>[Salary_Fact]</parent-name>
+            <remote-alias>deptNo</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Salary_Fact_0B933C0332554E6FA8BC626B9EC9392D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calenderKey</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[calenderKey]</local-name>
+            <parent-name>[Salary_Fact]</parent-name>
+            <remote-alias>calenderKey</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Salary_Fact_0B933C0332554E6FA8BC626B9EC9392D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>salary</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[salary]</local-name>
+            <parent-name>[Salary_Fact]</parent-name>
+            <remote-alias>salary</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Salary_Fact_0B933C0332554E6FA8BC626B9EC9392D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calenderKey</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[calenderKey (Calendar_Dimension)]</local-name>
+            <parent-name>[Calendar_Dimension]</parent-name>
+            <remote-alias>calenderKey</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Calendar_Dimension_BE382E3219D442F6BC4A0833DC23BF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fullDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[fullDate]</local-name>
+            <parent-name>[Calendar_Dimension]</parent-name>
+            <remote-alias>fullDate</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Calendar_Dimension_BE382E3219D442F6BC4A0833DC23BF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>monthOfDate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[monthOfDate]</local-name>
+            <parent-name>[Calendar_Dimension]</parent-name>
+            <remote-alias>monthOfDate</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Calendar_Dimension_BE382E3219D442F6BC4A0833DC23BF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quarterOfDate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[quarterOfDate]</local-name>
+            <parent-name>[Calendar_Dimension]</parent-name>
+            <remote-alias>quarterOfDate</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Calendar_Dimension_BE382E3219D442F6BC4A0833DC23BF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>yearOfDate</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[yearOfDate]</local-name>
+            <parent-name>[Calendar_Dimension]</parent-name>
+            <remote-alias>yearOfDate</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Calendar_Dimension_BE382E3219D442F6BC4A0833DC23BF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deptNo</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[deptNo (Department_Dimension)]</local-name>
+            <parent-name>[Department_Dimension]</parent-name>
+            <remote-alias>deptNo</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Department_Dimension_6EEDAB55BA8947E092A38FFB83ADEDBD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deptName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[deptName]</local-name>
+            <parent-name>[Department_Dimension]</parent-name>
+            <remote-alias>deptName</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Department_Dimension_6EEDAB55BA8947E092A38FFB83ADEDBD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>empNo</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[empNo (Employee_Dimension)]</local-name>
+            <parent-name>[Employee_Dimension]</parent-name>
+            <remote-alias>empNo</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee_Dimension_8EE8730D27AA4895BAD1C47CB3D76AFB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>firstName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[firstName]</local-name>
+            <parent-name>[Employee_Dimension]</parent-name>
+            <remote-alias>firstName</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee_Dimension_8EE8730D27AA4895BAD1C47CB3D76AFB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lastName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[lastName]</local-name>
+            <parent-name>[Employee_Dimension]</parent-name>
+            <remote-alias>lastName</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee_Dimension_8EE8730D27AA4895BAD1C47CB3D76AFB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Employee_Dimension]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee_Dimension_8EE8730D27AA4895BAD1C47CB3D76AFB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birthDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[birthDate]</local-name>
+            <parent-name>[Employee_Dimension]</parent-name>
+            <remote-alias>birthDate</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee_Dimension_8EE8730D27AA4895BAD1C47CB3D76AFB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hiredDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[hiredDate]</local-name>
+            <parent-name>[Employee_Dimension]</parent-name>
+            <remote-alias>hiredDate</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee_Dimension_8EE8730D27AA4895BAD1C47CB3D76AFB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[Employee_Dimension]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee_Dimension_8EE8730D27AA4895BAD1C47CB3D76AFB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Calendar_Dimension' datatype='table' name='[__tableau_internal_object_id__].[Calendar_Dimension_BE382E3219D442F6BC4A0833DC23BF8C]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Department_Dimension' datatype='table' name='[__tableau_internal_object_id__].[Department_Dimension_6EEDAB55BA8947E092A38FFB83ADEDBD]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Employee_Dimension' datatype='table' name='[__tableau_internal_object_id__].[Employee_Dimension_8EE8730D27AA4895BAD1C47CB3D76AFB]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Salary_Fact' datatype='table' name='[__tableau_internal_object_id__].[Salary_Fact_0B933C0332554E6FA8BC626B9EC9392D]' role='measure' type='quantitative' />
+      <column caption='Birth Date' datatype='date' name='[birthDate]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='calenderKey (Calendar Dimension)' datatype='integer' name='[calenderKey (Calendar_Dimension)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Calender Key' datatype='integer' name='[calenderKey]' role='dimension' type='ordinal' />
+      <column caption='Dept Name' datatype='string' name='[deptName]' role='dimension' type='nominal' />
+      <column caption='deptNo (Department Dimension)' datatype='string' name='[deptNo (Department_Dimension)]' role='dimension' type='nominal' />
+      <column caption='Dept No' datatype='string' name='[deptNo]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='empNo (Employee Dimension)' datatype='integer' name='[empNo (Employee_Dimension)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Emp No' datatype='integer' name='[empNo]' role='dimension' type='ordinal' />
+      <column caption='First Name' datatype='string' name='[firstName]' role='dimension' type='nominal' />
+      <column caption='Full Date' datatype='date' name='[fullDate]' role='dimension' type='ordinal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Hired Date' datatype='date' name='[hiredDate]' role='dimension' type='ordinal' />
+      <column caption='Last Name' datatype='string' name='[lastName]' role='dimension' type='nominal' />
+      <column caption='Month Of Date' datatype='string' name='[monthOfDate]' role='dimension' type='nominal' />
+      <column caption='Quarter Of Date' datatype='string' name='[quarterOfDate]' role='dimension' type='nominal' />
+      <column caption='Salary' datatype='integer' name='[salary]' role='measure' type='quantitative' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Year Of Date' datatype='integer' name='[yearOfDate]' role='dimension' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Calendar_Dimension' id='Calendar_Dimension_BE382E3219D442F6BC4A0833DC23BF8C'>
+            <properties context=''>
+              <relation connection='sqlserver.13m4pjd127zwdd1bgjecm1o5ec9f' name='Calendar_Dimension' table='[dbo].[Calendar_Dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='Department_Dimension' id='Department_Dimension_6EEDAB55BA8947E092A38FFB83ADEDBD'>
+            <properties context=''>
+              <relation connection='sqlserver.13m4pjd127zwdd1bgjecm1o5ec9f' name='Department_Dimension' table='[dbo].[Department_Dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='Employee_Dimension' id='Employee_Dimension_8EE8730D27AA4895BAD1C47CB3D76AFB'>
+            <properties context=''>
+              <relation connection='sqlserver.13m4pjd127zwdd1bgjecm1o5ec9f' name='Employee_Dimension' table='[dbo].[Employee_Dimension]' type='table' />
+            </properties>
+          </object>
+          <object caption='Salary_Fact' id='Salary_Fact_0B933C0332554E6FA8BC626B9EC9392D'>
+            <properties context=''>
+              <relation connection='sqlserver.13m4pjd127zwdd1bgjecm1o5ec9f' name='Salary_Fact' table='[dbo].[Salary_Fact]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[calenderKey]' />
+              <expression op='[calenderKey (Calendar_Dimension)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='Salary_Fact_0B933C0332554E6FA8BC626B9EC9392D' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='Calendar_Dimension_BE382E3219D442F6BC4A0833DC23BF8C' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[deptNo]' />
+              <expression op='[deptNo (Department_Dimension)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='Salary_Fact_0B933C0332554E6FA8BC626B9EC9392D' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='Department_Dimension_6EEDAB55BA8947E092A38FFB83ADEDBD' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[empNo]' />
+              <expression op='[empNo (Employee_Dimension)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='Salary_Fact_0B933C0332554E6FA8BC626B9EC9392D' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='Employee_Dimension_8EE8730D27AA4895BAD1C47CB3D76AFB' unique-key='true' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Average Salary'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Salary_Fact (Employee_DW)' name='federated.0aueb2t0uh8zm91cre7sp1ya5dv4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0aueb2t0uh8zm91cre7sp1ya5dv4'>
+            <column-instance column='[salary]' derivation='Avg' name='[avg:salary:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[yearOfDate]' derivation='None' name='[none:yearOfDate:qk]' pivot='key' type='quantitative' />
+            <column caption='Salary' datatype='integer' name='[salary]' role='measure' type='quantitative' />
+            <column caption='Year Of Date' datatype='integer' name='[yearOfDate]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0aueb2t0uh8zm91cre7sp1ya5dv4].[avg:salary:qk]</rows>
+        <cols>[federated.0aueb2t0uh8zm91cre7sp1ya5dv4].[none:yearOfDate:qk]</cols>
+      </table>
+      <simple-id uuid='{7D2FD2A3-EB34-474A-8B0F-FF622E0B9464}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Average Salary'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0aueb2t0uh8zm91cre7sp1ya5dv4].[none:yearOfDate:qk]</field>
+            <field>[federated.0aueb2t0uh8zm91cre7sp1ya5dv4].[yr:fullDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A54A0E3A-ED74-4C84-8F67-AE92590810CE}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Average Salary' width='192'>
+      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
+      C2G0DsE2AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
